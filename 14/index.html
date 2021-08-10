@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 14: trocar figura passando o mouse.    
+    </title>
+    <script>
+        function mouseEmCima(imagem){
+            imagem.src="figure1.jpg";
+        }
+        function mouseFora(imagem){
+            imagem.src="figure2.jpg";
+        }
+        var a = true
+        function trocaImagens(imagem){
+            if(a){
+                mouseFora(imagem);
+                a = false;
+            }else{
+                mouseEmCima(imagem);
+                a = true;
+            }
+        }
+    </script>
+</head>
+<body>
+    Passe o mouse sobre a imagem: <br> <br>
+    <img src="figure2.jpg" onclick="trocaImagens(this)" width="300" height="300"><br><br>
+    1) Agora padronize os tamanhos das imagen. <br><br>
+
+    2) Mude o vento para que as imagens sejam trocadas ao "clicar" com o mouse.
+
+    <!--
+        width="300" height="300" : dentro da tag img src
+        onclick="mouseEmcima(this)"
+        onMouseOver="mouseEmCima(this)"
+    -->
+    
+</body>
+</html>
